@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +21,27 @@ namespace CarProject
             Console.WriteLine("Car created: " + Brand + " in " + Color);
         }
 
+        public void Accelerate(int amount)
+        {
+            Speed += amount;
+            Console.WriteLine($"Accelerating... Current Speed: {Speed} km/h");
+        }
 
+        public void brake(int amount)
+        {
 
+            Speed -= amount;
+            if (Speed < 0)
+                Speed = 0;
+            Console.WriteLine($"Braking... Current Speed: {Speed} km/h");
+
+        }
+
+        public void stop()
+        {
+            Speed = 0;
+            Console.WriteLine("Car stopped.");
+
+        }
     }
 }
